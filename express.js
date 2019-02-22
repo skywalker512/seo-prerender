@@ -7,7 +7,7 @@ cacheableStatusCodes = { 200: true, 302: true, 404: true }
 app.use(require('prerender-node')
     .set('protocol', process.env.HOST_PROTOCOL)
     .set('host', process.env.HOST_URL)
-    .set('prerenderServiceUrl', 'http://127.0.0.1:3000')
+    .set('prerenderToken', process.env.TOKEN)
     .set('forwardHeaders', true)
     .set('beforeRender', function (req, done) {
         client.hmget(req.url, 'body', 'status', function (err, fields) {

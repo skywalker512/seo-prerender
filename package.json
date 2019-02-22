@@ -10,7 +10,6 @@
   "license": "ISC",
   "devDependencies": {
     "express": "^4.16.4",
-    "prerender": "4.4.1",
     "prerender-node": "^3.2.1",
     "redis": "^2.8.0"
   }
