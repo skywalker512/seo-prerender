@@ -1,8 +1,7 @@
-FROM zenika/alpine-chrome:with-node
+FROM node:11.4.0-alpine
 
-COPY . /usr/src/app/
-WORKDIR /usr/src/app
-RUN chown -R chrome:chrome /usr/src/app
+COPY . /app
+WORKDIR /app
 RUN npm install --registry=https://registry.npm.taobao.org
 EXPOSE 4000/tcp
 CMD nohup sh -c 'node prerender.js && node express.js'
