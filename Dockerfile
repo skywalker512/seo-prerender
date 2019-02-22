@@ -1,4 +1,5 @@
 FROM zenika/alpine-chrome:with-node
+USER root
 COPY . /app
 WORKDIR /app
 RUN npm install --registry=https://registry.npm.taobao.org
